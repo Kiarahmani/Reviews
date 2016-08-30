@@ -2,7 +2,7 @@
 ##### ([Chen et al. PLDI'16](http://flint.cs.yale.edu/shao/papers/device.html)) - Review by Kia Rahmani
 -----
 
-Due to their complexity, operating systems are very difficult to verify. Recent efforts have ended up in verifying only small simplified kernels, that are far from being realistic. These projects, do not verify the device drivers and are unaware of interrupts; which are in fact very difficult to verify, due to their non-deterministic behavior. Moreover, Verification techniques used in those works, do not immediately extend for verifying interruptable kernels. 
+Due to their complex design, operating systems are very difficult to verify. Recent efforts have ended up in verifying only small simplified kernels, that are far from being realistic. These projects, do not verify the device drivers and are unaware of interrupts; which are in fact very difficult to verify, due to their non-deterministic behavior. Moreover, Verification techniques used in those works, do not immediately extend for verifying interruptable kernels. 
 
 In almost all system verification techniques, two levels of *conceptual environments* are considered; they can be thought of as different machines, different languages, or as it is called in this paper different *layers*, and verified systems must be proven to behave the same in both environments (We can think about one layer as the specification and the other as the implementation of the system). 
  

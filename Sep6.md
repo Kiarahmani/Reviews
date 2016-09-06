@@ -1,7 +1,7 @@
 # Conflict-Driven Clause Learning SAT Solvers
 ###### Marques-Silva et. al - (Note by Kia Rahmani)
 ---
-The paper is dedicated to explaining modern SAT solvers, namely Conflict-Driven Clause Learning solvers. As the name suggests, this algorithm uses **conflicts**; that are found while **unit propagation** procedure of **DPLL** is being executed.   
+The paper is dedicated to explaining modern SAT solvers, namely Conflict-Driven Clause Learning solvers. As the name suggests, this algorithm uses **conflicts**; that are found while **unit propagation** procedure of **DPLL** is being executed, to improve the older procedures.   
 - [DPLL](http://www.cs.cornell.edu/courses/cs4860/2009sp/lec-04.pdf): Is a recursive procedure for solving SAT problem in O(2^{n}). The recursive calls are given a simpler formula to check; which is derived by removing clauses that are satisfied by our decision (*like all backtracking procedures, here also a decision is made at each level, whose correctness is checked later and consequently revised*). At each step a decision assigns a value to a variable, if derived simplified formula is nat satisfiable, another value will be assigned (obviously, if again the simple formula is unsatisfiable, we can conclude that the larger formula is also unsatisfiable).
 - [Unit Propagation](https://en.wikipedia.org/wiki/Unit_propagation): Is a very intuitive Analysis of clauses, considering the properties of CNF formulae: (a) If all literals in a clause are *false* but one, that literal must be *true*. (b) Since now we are sure about the value of a literal, we can remove it carefully from the rest of the clauses and modify what remains. 
 

@@ -2,7 +2,7 @@
 ###### Barrett et. al - Handbook of Satisfiability, 2008.  (Note by Kia Rahmani)
 ---
 ###### Are SAT solvers good enough? 
-Unfortunately, No. Although, there have been great improvements in the quality and quantity of SAT solvers in the recent decades, but no matter how fast SAT solvers become, there are some problems that can be naturally expressed only in richer languages, such as [FOL](http://mathworld.wolfram.com/First-OrderLogic.html). 
+Unfortunately, No. Although, there have been great improvements in the quality and quantity of SAT solvers in the recent decades, but no matter how fast SAT solvers become, there are some problems that can only be *naturally expressed* in richer languages, such as [FOL](http://mathworld.wolfram.com/First-OrderLogic.html). 
 ###### Like what?
 Even very simple tasks like finding natural numbers a, b, c and d such that:
 ``` Haskell

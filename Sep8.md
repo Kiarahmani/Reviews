@@ -8,7 +8,7 @@ Even very simple tasks like finding natural numbers a, b, c and d such that:
 ``` Haskell
 2a > b + c AND 2b > c + d AND 2c > 3d AND 3d > a + c 
 ```
-become too complex when is encoded using boolean variables. Moreover, the translation process itself is not trivial at all: We have to come up with constraints to limit the solutions, based on our [**interpretation**  of natural numbers and relations between them](https://en.wikipedia.org/wiki/Presburger_arithmetic).
+become too complex when are encoded using boolean variables. Moreover, the translation process itself is not trivial at all: We have to come up with constraints to limit the solutions, based on our [**interpretation**  of natural numbers and relations between them](https://en.wikipedia.org/wiki/Presburger_arithmetic).
 
 ###### Why not use a richer language to get rid of this complex translation?
 Sure we can! Instead of finding large translated CNF formulae, we can naturally express a lot of problems - *in the above example, almost as naturally as human English description of the problem* - by using richer languages. But there is a problem! these languages like FOL are undecidable. 

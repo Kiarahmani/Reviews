@@ -16,7 +16,7 @@ To address the termination problem **Abstract interpretation** is introduced, th
 What follows briefly explains this approach, using two instantiations (Interval analysis and Karr's method).
 - **Pick an abstract domain D:** definition of the syntactic class formulas of interest: c>v and c<v in IA and polynomial equations in Karr's method.
 - **Define mapping from FOL to D:** this mapping, connects formula F in FOL to element P in D, such that: F ⇒ P  
-(Note that we might lose some information here, which would result in over-approximation, which is fine. For example, 0 ≤ i ∧ i ≤ 0 ∧ 0 ≤ n is mapped to: i=0)
+(Note that we might lose some information here, that would result in over-approximation, which is fine. For example, 0 ≤ i ∧ i ≤ 0 ∧ 0 ≤ n is mapped to: i=0)
 - **Define an abstract sp:** the similar notion of sp, but *in the abstract domain D*. 
 - **Define abstract disjunction ⊔:** again, the definition of a general notion, inside the domain. It has to satisfy the following property: (F1 ∨ F2) ⇒ (F1 ⊔ F2) and (F1 ⊔ F2) ∈ D
 - **Define abstract implication checking:** in symbolic execution at each iteration, implication of the current assignments from the sp of the trace is checked. The notion of implication must be translated in domain D, such that it would be decidable.

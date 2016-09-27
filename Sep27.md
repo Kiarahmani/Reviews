@@ -11,7 +11,7 @@ In **static analysis**, our aim is to find mappings from program locations (synt
 
 The basic approach of finding these mappings, is **symbolic forward propagation**. This algorithm iteratively tries to find the exact set of reachable states (states are represented abstractly by logical formulas), and update the potential mapping μ (that initially maps all non-zero locations to ⊥). The key idea is to pick a location and make sure that the *sp* of current mapping satisfies mapping of final location for a path. If so, we have reached the correct answer. Note that, this algorithm is not guaranteed to terminate. 
 
-To address the above limitaions **Abstract interpretation** is introduced, that by over-approximating reachable states, can guarantee termination (Similar to what we already saw in bounded model checking and interpolation based *complete* model checking)
+To address the termination problem **Abstract interpretation** is introduced, that by over-approximating reachable states, can guarantee termination (Similar to what we already saw in bounded model checking and interpolation based *complete* model checking)
 
 What follows briefly explains this approach, using two instantiations (Interval analysis and Karr's method).
 - **Pick an abstract domain D:** definition of the syntactic class formulas of interest: c>v and c<v in IA and polynomial equations in Karr's method.

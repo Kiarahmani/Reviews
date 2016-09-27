@@ -9,7 +9,7 @@ The chapter describes the notion of program invariants and how they can be used 
 
 In **static analysis**, our aim is to find mappings from program locations (syntactical place-holders) to FOL formulas, that satisfy verification conditions (defined above), for *all acceptable traces* (In other words, *without executing the program*, we want to assign *some information* to the final state of all possible executions)
 
-The basic approach of finding these mappings, is **symbolic forward propagation**. This algorithm iteratively tries to find the exact set of reachable states (states are represented abstractly by logical formulas), and update the potential mapping μ (that initially maps all non-zero locations to ⊥). The key idea is to pick a location and make sure that the *sp* of current mapping satisfies mapping of final location for a path or not. If so, we have reached the correct answer. Note that, this algorithm is not guaranteed to terminate. 
+The basic approach of finding these mappings, is **symbolic forward propagation**. This algorithm iteratively tries to find the exact set of reachable states (states are represented abstractly by logical formulas), and update the potential mapping μ (that initially maps all non-zero locations to ⊥). The key idea is to pick a location and make sure that the *sp* of current mapping satisfies mapping of final location for a path. If so, we have reached the correct answer. Note that, this algorithm is not guaranteed to terminate. 
 
 To address the above limitaions **Abstract interpretation** is introduced, that by over-approximating reachable states, can guarantee termination (Similar to what we already saw in bounded model checking and interpolation based *complete* model checking)
 

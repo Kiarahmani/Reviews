@@ -19,6 +19,6 @@ What follows briefly explains this approach, using two instantiations (Interval 
 (Note that we might lose some information here, that would result in over-approximation, which is fine. For example, 0 ≤ i ∧ i ≤ 0 ∧ 0 ≤ n is mapped to: i=0)
 - **Define an abstract sp:** the similar notion of sp, but *in the abstract domain D*. 
 - **Define abstract disjunction ⊔:** again, the definition of a general notion, inside the domain. It has to satisfy the following property: (F1 ∨ F2) ⇒ (F1 ⊔ F2) and (F1 ⊔ F2) ∈ D (note how over-approximation might occur here, by weakening the relation)
-- **Define abstract implication checking:** in symbolic execution at each iteration, implication of the current assignments from the sp of the trace is checked. The notion of implication must be translated in domain D, such that it would be decidable.
+- **Define abstract implication checking:** in symbolic execution at each iteration, implication of the current assignments from the sp of the trace is checked. The notion of implication must be translated in domain D, such that it would be *decidable*.
 - **Define widening:** The transformations defined above, do not necessarily guarantee termination. A widening operator must be defined that would assure convergence in an infinite sequence of formulas of interest. This requires heuristics to guess an over-approximation to the sequence.  
 

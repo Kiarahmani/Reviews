@@ -4,9 +4,7 @@
 The paper is a survey of *software model checking* developements over the past few decades. Specifically, it focuses on automated techniques on program reasoning, a problem that cannot be solved, in its general definition.  As we have seen previously, the problem of symbolic model checking can easily become untractable. To avoid this problem of state-explosion and incompleteness, we saw how abstract interpretation could help. As an example, we studied how interpolation-based model checkers overcome this problem. This paper describes the same approaches in more details.  
 ###### Abstraction:
 The main idea here is that, we can deal with the incompleteness and exponential space growth, by losing some precision. We have seen this before, when we studied over-approximation methods. By defining an abstract domain, we can *capture only the interesting propertie of executions*. We can think of this abstracting step as a reversed compiler, that maps a lower level language to a higher level one. 
-
 The [reachability problem](https://en.wikipedia.org/wiki/Reachability_problem) can capture interesting safety -how about liveness?- properties of programs, and all abstracting techniques must be proved to be correct with respect to this problem. In other words, if there is a path in concrete domain, from an initial state to a final one, there must be also a similar path in the abstract domain -but not vice verca-
-
 Abstraction can be done in two different direction: 
 - Data-abstraction: Polyhedral (high dimension space and sets, to abstract program variables), predicate (fixed and finite set of formulas, that is abstracted by the smallest *implication-core* of each region)
 - Control-abstraction: path-insensitive (stets are considered, as long as they are achieved from *some* executions -explicit executions are relaxed), flow-insensitive (The program order is abstracted away, by considering a multiset -instead of a sequence- of operations)

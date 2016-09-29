@@ -1,4 +1,4 @@
-# Invariant Generation - Chapter 12
+# Software Model Checking
 ###### (Note by Kia Rahmani)
 ---
 The paper is a survey of *software model checking* developements over the past few decades. Specifically, it focuses on automated techniques on program reasoning, a problem that cannot be solved, in its general definition.  As we have seen previously, the problem of symbolic model checking can easily become untractable. To avoid this problem of state-explosion and incompleteness, we saw how abstract interpretation could help. As an example, we studied how interpolation-based model checkers overcome this problem. This paper describes the same approaches in more details.  

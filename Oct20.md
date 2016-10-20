@@ -1,0 +1,10 @@
+# Automating String Processing in Spreadsheets Using Input-Output Examples
+###### S. Gulwani -- (Note by Kia Rahmani)
+---
+This work targets the general problem of synthesizing programs, from end-users input/output examples. Amazingly, they have found a problem space that is very expressive (with millions of end-users), but can be specified using a restrictive language for efficient search. The developed tool can automatically solve a problem in seconds that used to take days in practice to solve, with additional features like noise-cancelling.
+
+The *string expression language* is the first contribution of the paper that supports conditionals and loops, and is shown to be able to represent multiple real world string transformation problems. The language is crafted to have a small set of operators, with small inverse sets. 
+
+The *synthesis algorithm* is the next contribution:  It tries to find transform expressions for all inputs. Without conditionals, the intersect of expressions found for each example is obviously the final program. However, conditionals might in fact, exist in the possible solution. They take a divide and conquer like approach to break the problem into smaller ones: inputs under the same assumptions are grouped and solved together. Heuristics are used to minimize the number of these partitions. The algorithm then merges these partial answers to create the final program, that puts each input into its own partition. The algorithm guarantees observational correctness, which means it is correct for all the given examples.
+
+The developed tool implements this algorithm and is equipped with multiple nice features like nose-cancelling, and was quickly deployed by Microsoft into MS Excel. This paper is a great example of pure academic research that gained quick and great success in the industry! 
